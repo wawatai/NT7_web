@@ -1,114 +1,66 @@
-footer {
+footer{
     width: 100%;
     height: auto;
+    background: $footerBG;
 
-    //上部
+
     .top {
         width: 100%;
-        height: 87px;
-        background: $footer_BG1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+        height: 50px;
+        background: $footer_Top_BG;
 
-    //下部
-    .footerList {
-        width: 100%;
-        height: auto;
-        background: $footer_BG2;
-        padding: 40px 0;
-
-        .center {
-            width: 1350px;
-            height: auto;
+        ul{
+            width: 628px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             margin: 0 auto;
 
-            ul {
-                width: 100%;
+            li{
+                width: auto;
                 height: auto;
-                display: flex;
-                justify-content: space-between;
+                color: $footer_Top_Word;
+                cursor: pointer;
 
-                li {
-                    width: 20%;
-                    height: auto;
-                    padding: 0 10px;
-                    box-sizing: border-box;
-
-                    .title {
-                        color: $footer_Title;
-                        font-size: 21px;
-                        font-weight: bold;
-                        margin-bottom: 30px;
-                        text-decoration: underline;
-                    }
-
-                    button {
-                        width: 100%;
-                        height: auto;
-                        margin-bottom: 20px;
-                        background: none;
-                        position: relative;
-                        color: $footer_Title;
-                        font-size: 16px;
-                        font-weight: bold;
-                        text-align: left;
-
-                        &:last-child {
-                            margin: 0;
-                        }
-
-                        &.serviceBtn {
-                            width: 240px;
-                            height: 54px;
-                            @include footerBtn;
-                            border-radius: 30px;
-                        }
-                        &.twitter {
-                            width: 48px;
-                            height: 48px;
-
-                            &:hover,&:active,&.active {
-
-                                &::before {
-                                    display: none;
-                                }
-                            }
-                        }
-
-                        &::before {
-                            opacity: 0;
-                            content: "";
-                            position: absolute;
-                            left: -25px;
-                            top: 50%;
-                            transform: translateY(-50%);
-                            width: 18px;
-                            height: 18px;
-                            background: $footer_Hover;
-                            clip-path: polygon(50% 0,86% 50%,50% 100%,14% 50%);
-                            transition: 0.3s all;
-                            pointer-events: none;
-                        }
-
-                        &:hover,&:active,&.active {
-                            color: $footer_Hover;
-
-                            &::before {
-                                opacity: 1;
-                            }
-                        }
-                    }
-
-                    iframe {
-                        width: 240px;
-                        height: 60px;
-                        border-radius: 50px;
-                        margin-bottom: 20px;
-                    }
+                &:hover,&:active,&.active {
+                    color: $footer_Top_Active;
                 }
             }
         }
     }
+
+    .bottom-platform{
+        width: 1200px;
+        height: 130px;
+        margin: 0 auto;
+        
+
+        ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            li {
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+
+    .bottom-copy {
+        width: 100%;
+        height: auto;
+        padding: 25px 0;
+
+        p {
+            color: $footer_Bottom_Word;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
 }
+    

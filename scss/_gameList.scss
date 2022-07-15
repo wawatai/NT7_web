@@ -1,0 +1,105 @@
+.listAll {
+    background: $pageGameList__BG;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    border-radius: 5px;
+    border: 1px solid $pageGameList__Border;
+
+    .top {
+        display:flex;
+
+        // 分類tab
+        .filterTab {
+            width: 100%;
+            height: 50px;
+            display: flex;
+    
+            li {
+                font-size: 18px;
+                color: $pageGameList_subFont;
+                padding: 12px 53px 16px 53px;
+                cursor: pointer;
+    
+                &:hover,&.active {
+                    color: $pageGameList_mainFont;
+                    font-weight: bold;
+                    border-bottom: 6px solid $pageGameList__Border;
+                }
+            }
+        }
+
+        // 搜尋欄
+        .searchBox {
+            width: auto;
+            height: 38px;
+
+            input {
+                @include inputMain;
+                width: 264px;
+                height: 38px;
+                padding: 0 49px;
+
+                &::placeholder{
+                    color: $pageGameList_subFont;
+                }
+            }
+        }
+        
+    
+    }
+    
+    // 分隔線
+    .border{
+        border: 1px solid $pageGameList_innerBorder;
+        width: 100%;
+        height: 1;
+        margin-bottom: 25px;
+    }
+
+
+
+    // 遊戲總覽
+    .gameCloum{
+        display: grid;
+        grid-template-columns: repeat(5,222px);
+        gap: 13px;
+        margin: 20px 0;
+
+        // 遊戲格
+        .gameBlock{
+            width: 224px;
+            height: 178px;
+            border: 1px solid $pageGameList__Border;
+            border-radius: 10px;
+            cursor: pointer;
+            overflow: hidden;
+            object-fit: cover;
+
+            // 遊戲名稱列+我的最愛
+            .itemLine{
+                display: flex;
+                border-top: 1px solid $pageGameList__Border;
+                justify-content: space-between;
+                padding: 6px 13px;
+
+                .gameName {
+                    color: $pageGameList_mainFont;
+                    font-size: 16px;
+                }
+                
+                // +我的最愛
+                .addLike {
+                    width: 21px;
+                    height: 19px;
+                    cursor: pointer;
+
+                    &.active {
+                        background-position-x: 100%;
+                    }
+                }
+            }
+            
+        }
+    }
+}

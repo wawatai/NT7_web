@@ -1,0 +1,91 @@
+//遊戲種類
+.gameType {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 143px;
+    grid-gap: 19px;
+    margin: 20px 0;
+    
+    .gameBlock {
+        width: auto;
+        height: auto;
+        padding: 11px 29px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+            
+            img {
+                transform: scale(1.2);
+                transition: ease-in;
+            }
+    
+            i {
+                position: absolute;
+                right: 30px;
+                animation-name: arrow;
+                transition: ease-in-out 0.3s all ;
+                animation-duration: 0.8s ;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes arrow {
+                0% {
+                    right: 20px;
+                  }
+                25% {
+                    right: 23px;
+                  }
+                0% {
+                right: 20px;
+                }
+            }
+        }
+
+        .gT-text {
+            width: auto;
+            height: auto;
+            margin-left: 50px;
+
+            //2字
+            &.short {
+                margin-left: 35px;
+            }
+
+            //3字
+            &.midshort {
+                margin-left: 27px;
+            }
+
+            //捕魚微調
+            &.fishshort {
+                margin-left: 1px;
+            }
+
+            p {
+                color: $main-font;
+                font-size: 27px;
+                margin-bottom: 11px;
+            }
+
+            span {
+                color: $subs-font;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+
+        i {
+            width: 21px;
+            height: 22px;
+            position: absolute;
+            right: 20px;
+            
+        }
+    }
+}

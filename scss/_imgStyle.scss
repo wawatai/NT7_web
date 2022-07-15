@@ -1,635 +1,173 @@
-//忘記密碼
-header .forget i {
-    background: url('../images/icon/question.png') no-repeat;
-    background-size: 100%;
-}
-//header 登入後下選單旋轉圖
-header .transferInfo .money i {
-    background: url('../images/icon/svg/loading_g.svg') no-repeat;
-    background-size: 100%;
-}
-
-//下拉選單 topGameList arrow
-.topGameList .prev::before,
-.topGameList .next::before {
-    background: url('../images/icon/svg/arrow_w.svg') no-repeat;
-    background-size: 100%;
-}
-
-//mainWrap
-.mainWrap .quickBox i {
-    background: url('../images/icon/quick_ic.png') no-repeat;
-    background-size: 600%;
-}
-.mainWrap .loveGame .textBox .love {
-    background: url('../images/icon/svg/love1.svg') no-repeat;
-    background-size: 100%;
-}
-.mainWrap .loveGame .textBox .love.active {
-    background: url('../images/icon/svg/love2.svg') no-repeat;
-    background-size: 100%;
-}
-
-//側邊 sideBar img
-.sideBar .inviteBtn a {
-    background: url('../images/icon/invite.gif') no-repeat;
-    background-size: contain;
-}
-.sideBar .goTop i {
-    background: url('../images/icon/goTop.png') no-repeat;
-    background-size: contain;
-}
-
-//footer
-footer .twitter {
-    background: url('../images/icon/svg/twitter.svg') no-repeat !important;
-    background-size: contain;
-}
-
-//jumpWindow ic
-.jumpWindow .close_ic {
-    background: url('../images/icon/svg/close_w.svg') no-repeat;
-    background-size: 100%;
-}
-.jumpWindow.betWindow .trans_arrow {
-    background: url('../images/icon/svg/transfer_arrow.svg') no-repeat;
-    background-size: 100%;
-}
-//loading
-.jumpWindow.loading .content div {
-    background: url('../images/icon/svg/loading_b.svg') no-repeat;
-    background-size: 100%;
-}
-.jumpWindow .pageBox .page i {
-    background: url('../images/icon/svg/arrow_g.svg') no-repeat;
-    background-size: contain;
-}
-
-//gameWrap background
-.gameWrap {
-    background: url('../images/gameBG.jpg') no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
-}
-
-//.slotCenter .slotBody .nav .serach
-.slotBody .search_ic {
-    background: url('../images/icon/svg/search.svg') no-repeat top center;
+//BG
+.bg {
+    background: url('../images/bgFT.png') no-repeat top center;
     background-size: cover;
 }
-//.pfName按鈕arrow
-.slotBody .pfName button i {
-    background: url('../images/icon/svg/arrow_w.svg') no-repeat;
-    background-size: 100%;
-}
-//.gameList .love
-.slotBody .gameList .textBox .love {
-    background: url('../images/icon/svg/love1.svg') no-repeat;
-    background-size: 100%;
-}
-.slotBody .gameList .textBox .love.active {
-    background: url('../images/icon/svg/love2.svg') no-repeat;
-    background-size: 100%;
-}
 
-//evevtTitle
-.eventTitle {
-    background: url('../images/eventTitleBG.png') no-repeat;
-    background-size: cover;
-}
-//eventBody .side li i
-.eventBody .event_ic,
-.eventBody .event_ic::before {
-    background: url('../images/icon/svg/entire.svg') no-repeat;
-    background-size: 100%;
-}
-//eventDetail .back
-.eventDetail .back {
-    background: url('../images/icon/event_back.png') no-repeat;
+//header
+header .accountBox .account::before {
+    background: url('../images/icon/svg/log-ac.svg') no-repeat;
     background-size: contain;
 }
-.eventDetail .btnBox .twitter {
-    background: url('../images/icon/svg/twitter.svg');
+header .accountBox .password::before {
+    background: url('../images/icon/svg/log-pw.svg') no-repeat;
     background-size: contain;
 }
-.eventDetail .btnBox .telegram {
-    background: url('../images/icon/svg/telegram.svg');
+header .accountBox .password::after {
+    background: url('../images/icon/svg/log-forget.svg') no-repeat;
     background-size: contain;
+    cursor: pointer;
 }
-.eventDetail .btnBox .wechat {
-    background: url('../images/icon/svg/wechat.svg');
-    background-size: contain;
-}
-.eventDetail .btnBox .facebook {
-    background: url('../images/icon/svg/facebook.svg');
-    background-size: contain;
-}
-.eventDetail .btnBox .line {
-    background: url('../images/icon/svg/line.svg');
-    background-size: contain;
-}
-.eventDetail .btnBox .link {
-    background: url('../images/icon/link.png');
-    background-size: contain;
-}
-
-//innerSdie .innerNav li i
-.innerNav .user_ic,
-.innerNav .user_ic::before {
-    background: url('../images/icon/svg/innerNav_user.svg') no-repeat;
-    background-size: 100%;
-}
-.innerNav .vip_ic,
-.innerNav .vip_ic::before {
-    background: url('../images/icon/svg/innerNav_vip.svg') no-repeat;
-    background-size: 100%;
-}
-.innerNav .wallet_ic,
-.innerNav .wallet_ic::before {
-    background: url('../images/icon/svg/innerNav_wallet.svg') no-repeat;
-    background-size: 100%;
-}
-.innerNav .card_ic,
-.innerNav .card_ic::before {
-    background: url('../images/icon/svg/innerNav_card.svg') no-repeat;
-    background-size: 100%;
-}
-.innerNav .dealRecord_ic,
-.innerNav .dealRecord_ic::before {
-    background: url('../images/icon/svg/innerNav_dealRecord.svg') no-repeat;
-    background-size: 100%;
-}
-.innerNav .betRecord_ic,
-.innerNav .betRecord_ic::before {
-    background: url('../images/icon/svg/innerNav_betRecord.svg') no-repeat;
-    background-size: 100%;
-}
-.innerNav .event_ic,
-.innerNav .event_ic::before {
-    background: url('../images/icon/svg/innerNav_event.svg') no-repeat;
-    background-size: 100%;
-}
-.innerNav .mail_ic,
-.innerNav .mail_ic::before {
-    background: url('../images/icon/svg/innerNav_mail.svg') no-repeat;
-    background-size: 100%;
-}
-.innerNav .dividend_ic,
-.innerNav .dividend_ic::before {
-    background: url('../images/icon/svg/innerNav_dividend.svg') no-repeat;
-    background-size: 100%;
-}
-.innerNav .invite_ic,
-.innerNav .invite_ic::before {
-    background: url('../images/icon/svg/innerNav_invite.svg') no-repeat;
-    background-size: 100%;
-}
-
-//.memberWrap .level i
-.memberWrap .level .data_ic {
-    background: url('../images/icon/svg/data.svg') no-repeat center;
-    background-size: 65%;
-}
-.memberWrap .level .phone_ic {
-    background: url('../images/icon/svg/phone.svg') no-repeat center;
-    background-size: 65%;
-}
-.memberWrap .level .bankcard_ic {
-    background: url('../images/icon/svg/bankcard.svg') no-repeat center;
-    background-size: 65%;
-}
-.memberWrap .level .mail_ic {
-    background: url('../images/icon/svg/mail_w.svg') no-repeat center;
-    background-size: 65%;
-}
-.memberWrap .left .changePhone::before,
-.memberWrap .changePassword button::before {
-    background: url('../images/icon/edit.png') no-repeat;
-    background-size: contain;
-}
-.memberWrap .right .copy::before {
-    background: url('../images/icon/copy.png') no-repeat;
-    background-size: contain;
-}
-.memberWrap .right .qr {
-    background: url('../images/icon/qr.png') no-repeat;
-    background-size: contain;
-}
-
-//vipWrap
-.vipWrap {
-    background: url('../images/vip_info.png') no-repeat;
-    background-size: 100%;
-}
-.vipHeader .medal {
-    background: url('../images/icon/medal.png') no-repeat;
-    background-size: 100%;
-}
-.vipWrap .detailTitle .back {
-    background: url('../images/icon/svg/arrow_r.svg') no-repeat;
-    background-size: 100%;
-}
-.vipWrap .detailCardBox .prev,
-.vipWrap .detailCardBox .next {
-    background: url('../images/icon/svg/arrow_r.svg') no-repeat;
-    background-size: 100%;
-}
-.vipWrap .detailCardBox .cardBg {
-    background: url('../images/vip_card.png') no-repeat;
-    background-size: 100%;
-}
-.vipWrap .detailCardBox .cardBg.v2 {
-    background: url('../images/vip_card_2.png') no-repeat;
-    background-size: 100%;
-}
-.vipWrap .detailCardBox .cardBg.v3 {
-    background: url('../images/vip_card_3.png') no-repeat;
-    background-size: 100%;
-}
-
-//wallet
-.walletWrap .platformWallet .re_ic {
-    background: url('../images/icon/svg/refresh.svg') no-repeat;
-    background-size: contain;
-}
-.walletWrap .platformWallet .remind_ic {
-    background: url('../images/icon/remind.png') no-repeat;
-    background-size: contain;
-}
-
-//dealWrap
-.dealWrap .waterBox .arrow_ic {
-    background: url('../images/icon/svg/arrow_r.svg') no-repeat;
-    background-size: 100%;
-}
-.dealWrap .dealBox .page i,
-.dealWrap .waterBox .page i {
-    background: url('../images/icon/svg/arrow_g.svg') no-repeat;
-    background-size: contain;
-}
-
-//.cardMiddle .addCard_ic
-.cardMiddle .card .addCard_ic {
-    background: url('../images/icon/svg/addCard.svg') no-repeat;
-    background-size: 100%;
-}
-.cardWrap .cardBox .card {
-    background: url('../images/bankCard.png') no-repeat;
-    background-size: cover;
-}
-.cardWrap .review {
-    background: url('../images/icon/review.png') no-repeat;
-    background-size: 100%;
-}
-.cardWrap .bottomWrap .idImg {
-    background: url('../images/icon/photo.png') no-repeat;
-    background-size: contain;
-}
-
-//.rightSide .smallBoard .arrow
-.rightSide .smallBoard .arrow {
-    background: url('../images/icon/svg/arrow_r.svg') no-repeat;
-    background-size: 100%;
-}
-
-//.mailWrap.innerMode .title .arrow_ic
-.mailWrap.innerMode .title .arrow_ic,
-.mailWrap.innerMode .msgTitle .prev,.mailWrap.innerMode .msgTitle .next {
-    background: url('../images/icon/svg/arrow_b.svg') no-repeat;
-    background-size: contain;
-}
-.mailWrap .bottom .page i {
-    background: url('../images/icon/svg/arrow_g.svg') no-repeat;
-    background-size: contain;
-}
-
-//.betWrap .fakeTalbe .arrow_ic
-.betWrap .fakeTable .arrow_ic {
-    background: url('../images/icon/svg/arrow_b.svg') no-repeat;
-    background-size: 100%;
-}
-.betWrap .fakeTable .page i {
-    background: url('../images/icon/svg/arrow_g.svg') no-repeat;
-    background-size: contain;
-}
-
-//eventWrap
-.eventWrap .tableWrap .page i {
-    background: url('../images/icon/svg/arrow_g.svg') no-repeat;
-    background-size: contain;
-}
-
-//.depositWrap .top button i
-.depositWrap .top .title button i {
-    background: url('../images/icon/question_2.png') no-repeat;
-    background-size: 100%;
-}
-//.depositWrap .list i
-.depositWrap .list .card_ic {
-    background: url('../images/icon/svg/card.svg') no-repeat;
-    background-size: 100%;
-}
-.depositWrap .list .depositIC {
-    background: url('../images/icon/deposit_ic.png') no-repeat;
-    background-size: 500%;
-}
-.depositWrap .list .prev,.depositWrap .list .next {
-    background: url('../images/icon/svg/arrow_r.svg') no-repeat;
-    background-size: 100%;
-}
-.depositWrap .bottom .fakeTable .copy::before {
-    background: url('../images/icon/copy.png') no-repeat;
-    background-size: contain;
-}
-
-//.withdrawalWrap .rightSide .trans_arrow
-.rightSide .tran_ic {
-    background: url('../images/icon/svg/transfer_arrow.svg') no-repeat;
-    background-size: 100%;
-}
-.rightSide .re_ic {
-    background: url('../images/icon/svg/refresh.svg') no-repeat;
-    background-size: contain;
-}
-.rightSide .search_ic::before {
-    background: url('../images/icon/svg/search.svg') no-repeat;
-    background-size: contain;
-}
-
-//.withdrawalWrap .smallTitle reset_ic
-.withdrawalWrap .smallTitle .reset_ic {
-    background: url('../images/icon/svg/refresh.svg') no-repeat;
-    background-size: 100%;
-}
-//withdrawalWrap .platformBox .db_arrow
-.withdrawalWrap .platformBox .db_arrow {
-    background: url('../images/icon/svg/unfold.svg') no-repeat;
-    background-size: 100%;
-}
-.withdrawalWrap .platformBox .remind_ic {
-    background: url('../images/icon/remind.png') no-repeat;
-    background-size: contain;
-}
-
-//transferWrap .walletTitle .reset_ic
-.transferWrap .walletTitle .reset_ic {
-    background: url('../images/icon/svg/refresh.svg') no-repeat;
-    background-size: 100%;
-}
-.transferWrap .platform .db_arrow {
-    background: url('../images/icon/svg/unfold.svg') no-repeat;
-    background-size: 100%;
-}
-.transferWrap .platform .remind_ic {
-    background: url('../images/icon/remind.png') no-repeat;
-    background-size: contain;
-}
-.transferWrap .platformBox .trans_ic {
-    background: url('../images/icon/svg/transfer_arrow.svg') no-repeat;
-    background-size: 100%;
-}
-
-//helpPage .nav i
-.helpPage .nav .arrow_ic {
-    background: url('../images/icon/svg/arrow_r.svg') no-repeat;
-    background-size: 100%;
-}
-.helpPage .nav .bulb {
-    background: url('../images/icon/svg/bulb.svg') no-repeat;
-    background-size: 100%;
-}
-.helpPage .nav .problem {
-    background: url('../images/icon/svg/helpProblem.svg') no-repeat;
-    background-size: 100%;
-}
-.helpPage .nav .aboutUs {
-    background: url('../images/icon/svg/aboutus.svg') no-repeat;
-    background-size: 100%;
-}
-.helpPage .nav .downloadIC{
-    background: url('../images/icon/download.png') no-repeat;
-    background-size: 100%;
-}
-//helpPage .teachList arrow_ic
-.helpPage .teachList .arrow_ic {
-    background: url('../images/icon/svg/arrow_b.svg') no-repeat;
-    background-size: 100%;
-}
-//helpPage .img
-.helpPage .img.online01 {
-    background: url('../images/help/online01.png') no-repeat;
-    background-size: 100%;
-}
-.helpPage .img.online02 {
-    background: url('../images/help/online02.png') no-repeat;
-    background-size: 100%;
-}
-.helpPage .img.online03 {
-    background: url('../images/help/online03.png') no-repeat;
-    background-size: 100%;
-}
-.helpPage .img.online04 {
-    background: url('../images/help/online04.png') no-repeat;
-    background-size: 100%;
-}
-.helpPage .img.online05 {
-    background: url('../images/help/online05.png') no-repeat;
-    background-size: 100%;
-}
-
-//register
-.registerWrap {
-    background: url('../images/registerBG.jpg') no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-.registerWrap .register_ic {
-    background: url('../images/icon/register_ic.png');
-    background-size: contain;
-}
-.registerWrap .eye_ic {
-    background: url('../images/icon/eye.png') no-repeat;
-    background-size: 100%;
-}
-.registerWrap .date_ic {
-    background: url('../images/icon/date.png') no-repeat;
-    background-size: contain;
-}
-.registerWrap .line_ic {
-    background: url('../images/icon/line_ic.png') no-repeat;
-    background-size: contain;
-}
-
-//invite
-.inviteWrap .left .copy::before {
-    background: url('../images/icon/copy.png') no-repeat;
-    background-size: contain;
-}
-.inviteWrap .right .qr {
-    background: url('../images/icon/qr.png') no-repeat;
-    background-size: 100%;
-}
-.inviteWrap .mainImg {
-    background: url('../images/invite.jpg') no-repeat;
-    background-size: 100%;
-}
-
-//point
-.pointWrap .fakeTable .page i,
-.pointWrap .recordTable .page i {
-    background: url('../images/icon/svg/arrow_g.svg') no-repeat;
-    background-size: contain;
-}
-.pointWrap .fakeTable .arrow_ic {
-    background: url(../images/icon/svg/arrow_b.svg) no-repeat;
-    background-size: 100%;
-}
-
-
-////////img↓↓↓↓↓↓↓↓↓
-
-
-//logo
-header .logo {
-    width: 190px;
-    height: 80px;
-    object-fit: cover;
-}
-//header 下拉選單
-header .topGameList li div {
-    width: 195px;
-    height: 168px;
-    box-sizing: border-box;
-    padding: 0 8px;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-}
-header .topGameList .hot li div {
-    width: 257px;
-    height: 171px;
-    box-sizing: border-box;
-    padding: 0 8px;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border: solid 1px #ffc13c;
-        border-radius: 5px;
-    }
-}
-//banner
-.single-item img {
-    width: 100%;
-    max-height: 478px;
-    object-fit: cover;
-}
-
-//入口頁中央遊戲enter .mainWrap .img
-.mainWrap .typeList img {
-    width: 100%;
+header .logo img {
+    height: 99px;
     object-fit: contain;
 }
 
-//夥伴圖
-footer .top img {
-    width: auto;
-    height: auto;
+
+//header登入
+header .top .accountBox .btnLine .memberCenter .member_ic{
+    background: url('../images/icon/svg/login-member.svg') no-repeat;
+    background-size: contain;
+}
+header .top .accountBox .btnLine .message .mail_ic{
+    background: url('../images/icon/svg/login-message.svg') no-repeat;
+    background-size: contain;
 }
 
-//gameWrap img
-.gameWrap .mainImg {
-    width: 675px;
-    height: 732px;
+//nav導航列
+
+
+//遊戲種類
+.gameBlock.sport {
+    background: url('../images//gameType/old/btnBG.png') no-repeat;
+    background-size: cover;
 }
-.gameWrap .btnBox img {
-    width: 189px;
+.gameBlock.live {
+    background: url('../images//gameType/old/btnBG.png') no-repeat;
+    background-size: cover;
+}
+.gameBlock.lottery {
+    background: url('../images//gameType/old/btnBG.png') no-repeat;
+    background-size: cover;
+}
+.gameBlock.slot {
+    background: url('../images//gameType/old/btnBG.png') no-repeat;
+    background-size: cover;
+}
+.gameBlock.fish {
+    background: url('../images//gameType/old/btnBG.png') no-repeat;
+    background-size: cover;
+}
+.gameBlock.poker {
+    background: url('../images//gameType/old/btnBG.png') no-repeat;
+    background-size: cover;
+}
+.gameBlock .arrow_ic {
+    background: url('../images//gameType/arrow_ic.png') no-repeat;
+    background-size: contain;
+}
+
+//service
+.homeWrap .service .img {
+    background: url('../images/service/service_ic.png') no-repeat;
+    background-size: 300%;
+}
+
+//合作平台
+.platform{
+    height:35.8px;
+    width: auto;
+}
+
+
+//ad
+.ad .single-item img {
+    height: 380px;
+    background-size: contain;
+}
+
+//platformGame
+.platformGame .leftArea img {
+    width: 100%;
+    object-fit: contain;
+}
+.platformGame .rightArea img {
+    width: 100%;
     height: 185px;
     object-fit: cover;
     object-position: top;
-
-    &:hover,&:active,&.active {
-        object-position: bottom;
-    }
 }
 
-//pfName 廠商icon
-.pfName img {
-    width: auto;
-    height: 85%;
-}
-
-//.slotBody .gameList img
-.slotBody .gameList img {
+//eventPage 優惠頁面
+.eventPage .topArea .eventBanner{
     width: 100%;
-    height: 165px;
+    height: 221px;
+    background: url('../images/eventPage/eventBanner.png') no-repeat;
+    position: absolute;
+    top: 100px;
+    left: 0;
 }
 
-//.eventList .eventBox img
-.eventBox {
-    
-    .imgBox {
-        width: 792px;
-        height: 192px;
+.eventPage .leftArea li .eventDateIc {
+    width: 27px;
+    height: 27px;
+    background: url('../images/icon/event-date.png') no-repeat;
+    background-size: cover;
+    margin-right: 17px;
+    background-position-y: 0;
+}
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+.eventPage .rightArea .eventDitail .backIc{
+    width: 16px;
+    height: 14px;
+    background: url('../images/icon/svg/event-backBtn.png') no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+}
+
+//gameList
+//--搜索列ICON--
+.listAll .top .searchBox .searchIc {
+    width: 19px;
+    height: 20px;
+    background: url('../images/icon/search.png') no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 147px;
+    left: 1287px;
+
+}
+
+.listAll .gameCloum .gameBlock .picBox {
+    //--遊戲圖片--
+        width: auto;
+        height: 146px;
+        position: relative;
+
+        .mask {
+            width: 224px;
+            height: 146px;
+            background: $pageGameList_mask;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: 0.3s all;
+        } 
+        &:hover .mask{
+            opacity: 1;
         }
     }
-}
-//.eventDetail .imgBox img
-.eventDetail {
 
-    .imgBox {
-        width: 100%;
-        height: 267px;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
+//--收藏遊戲--
+.listAll .addLike {
+    background: url('../images/icon/like.png') no-repeat;
+    background-size: 200%;
 }
 
-//.jumpWindow .checkEvent img
-.checkEvent {
-
-    .imgBox {
-        width: 100%;
-        height: 400px;
-
-        img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-    }
-}
-
-//register .logo
-.registerWrap .title img {
-    width: 125px;
-    object-fit: contain;
-}
-
-//右側小活動中心
-.rightSide .smallBoard img {
-    width: 100%;
-}
-
-//invite
-.inviteWrap .bottom img {
-    width: 100%;
-}
-
-//help
-.helpWrap img {
-    width: 100%;
+//彈跳視窗
+.coverBg .quickTransfer .tabsContent .transfer{
+    background:  url('../images/icon/transfer.png') no-repeat;
+    width: 22px;
+    height: 25px;
 }

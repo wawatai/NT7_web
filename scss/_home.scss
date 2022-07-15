@@ -1,0 +1,11 @@
+.homeWrap {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 120px 0 28px;
+
+    &.platformGame {
+        display: flex;
+        justify-content: space-between;
+    }
+}
