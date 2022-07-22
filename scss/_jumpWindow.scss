@@ -15,18 +15,22 @@
     }
 
     .jumpWindow {
-        height: auto;
         width: 100%;
+        height: auto;
         background: $jpWBG;
         border: solid 1px $jpW_OuterBorder;
         border-radius: 10px;
+        display: none;
 
+        &.display {
+            display: block;
+        }
 
         .titleArea {
-            background: $jpW_TitleBG;
-            border-radius: 8px 8px 0 0;
             width: 100%;
             height: 50px;
+            background: $jpW_TitleBG;
+            border-radius: 8px 8px 0 0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -39,10 +43,10 @@
             }
 
             .closeBtn {
-                position: absolute;
-                right: 22px;
                 width: 20px;
                 height: 20px;
+                position: absolute;
+                right: 22px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -71,52 +75,16 @@
             width: 840px;
 
             .tabs {
-                display: flex;
                 width: 100%;
                 height: auto;
-                padding: 29px 25px 0 25px;
+                display: flex;
+                padding: 29px 25px 0;
     
                 li {
                     width: auto;
                     height: auto;
-
-                    &:hover,&:active,&.active {    
-                        a {
-                            background: $jpW_TabsBgAct;
-                            border-radius: 5px 5px 0 0;
-                            color: $jp_main-font;
-                            margin-right: 3px;
-
-                            &::before {
-                                display: block;
-                            }
-                        }
-                    }
-                         
-                    a {
-                        display: block;
-                        background: $jpW_TabsBgAct;
-                        color: $jpW_Date;
-                        border-radius: 5px 5px 0 0;
-                        border:1px solid $jpW_Boder;
-                        border-bottom: 0;
-                        font-size: 16px;
-                        text-decoration: none;
-                        margin-right: 3px;
-                        padding: 11px 39px;
-                        position: relative;
-
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            left: 0;
-                            bottom: -1px;
-                            width: 100%;
-                            height: 1px;
-                            background: $jpWBG;
-                            display: none;
-                        }
-                    }
+                    @include pageBtn;
+                    margin-right: 3px;
                 }
             }
 
@@ -131,31 +99,28 @@
                     height: auto;
 
                     li {
+                        width: 100%;
+                        height: 50px;
+                        border-bottom: 1px solid $main-Border_1;
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
-                        width: 100%;
-                        height: 50px;
-                        border-bottom: 1px solid $jpW_Boder;
                         padding: 0 6px;
-                        cursor: pointer;
     
                         &:first-child {
-                            border-top: solid 1px $jpW_Boder;
+                            border-top: solid 1px $main-Border_1;
                         }
 
                         p {
-                            color: $jp_main-font;
+                            width: 80%;
+                            color: $main-font;
                             font-size: 16px;
                             font-weight: bold;
-                            width: 80%;
-                            white-space: nowrap;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
+                            @include textHidden;
 
                             &.date {
                                 width: auto;
-                                color: $jpW_Date;
+                                color: $subs-font;
                             }
                         }
                     }
@@ -164,80 +129,62 @@
         }
 
         //登入/帳密提示
-        &.plzLogin, &.logHint, &.nonExist {
-            width: 421px;
+        &.clickWindow {
+            width: 420px;
 
-            >.tabsContent {
+            .tabsContent {
                 width: 100%;
                 height: auto;
-                padding: 32px 83px;
+                padding: 32px 82px;
 
                 p {
+                    color: $main-font;
+                    font-size: 16px;
                     display: flex;
                     justify-content: center;
-                    font-size: 16px;
                 }
 
-                .content {
-                    color: $jp_main-font;
+                button {
+                    width: 250px;
+                    height: 42px;
+                    @include mainBtn;
+                    margin-top: 30px;
                 }
-
-                    .checkBtn {
-                        @include buttonA;
-                        width: 250px;
-                        height: 42px;
-                        font-weight: bold;
-                        text-align: center;
-                        padding-top: 14px;
-                        margin-top: 30px;
-                    }
              }
-            
         }
 
         //忘記密碼
         &.forgotPw {
-            width: 421px;
+            width: 420px;
 
-            >.tabsContent {
+            .tabsContent {
                 width: 100%;
                 height: auto;
                 padding: 27px 69px;
-        
 
                 .inputBox {
                     width: 280px;
+                    height: auto;
                     margin-bottom: 15px;
 
-                    .phoneNum {
-                        @include inputMain;
+                    input {
                         width: 280px;
-                        height: 41px;
-                        padding: 9px;
-                        margin-bottom: 15px;
-
-                        &::placeholder {
-                            color: $jpW_Date;
-                        }
+                        height: 42px;
+                        @include mainInput;
                     }
                 }
 
                 .checkBtn {
-                    @include buttonA;
                     width: 100%;
                     height: 42px;
-                    font-weight: bold;
-                    text-align: center;
-                    line-height: 14px;
-                    margin-top: 9px;
+                    @include mainBtn;
                 }
                 
                 //紅字提醒訊息
                 .remind {
-                    color: $jpW_remind;
-                    display: flex;
-                    justify-content: center;
+                    color: $remind;
                     font-size: 14px;
+                    margin-top: 30px;
                 }
             
              }
@@ -262,14 +209,14 @@
 
                     .mainFont {
                         width: 100px;
-                        color: $jp_main-font;
+                        color: $main-font;
                         font-size: 16px;
                         flex-shrink: 0;
                     }
 
                     .transPlatform {
                         width: 100%;
-                        color: $jp_subs-font;
+                        color: $title_1;
                         font-size: 28px;
                         font-weight: bolder;
                     }
@@ -279,18 +226,18 @@
                         height: auto;
                         display: flex;
                         justify-content: center;
+
+                        .transfer {
+                            width: 27px;
+                            height: 23px;
+                            transform: rotate(90deg);
+                        }
                     }
 
                     input {
-                        @include inputMain;
                         width: 100%;
                         height: 42px;
-                        padding: 9px;
-
-                        &::placeholder {
-                            color: #fff;
-                            font-size: 17px;
-                        }
+                        @include mainInput;
                     }
 
                     .btnBox {
@@ -304,7 +251,7 @@
                             margin-bottom: 12px;
     
                             .myBlock {
-                                @include buttonB;
+                                @include secondBtn;
                                 width: auto;
                                 height: 30px;
                                 font-size: 15px;
@@ -316,17 +263,14 @@
              }
              
              .checkBtn {
-                @include buttonA;
                 width: 100%;
                 height: 42px;
-                font-weight: bolder;
-                text-align: center;
-                line-height: 43px;
+                @include mainBtn;
             }
 
             .bottom {
                 padding: 16px 69px;
-                border-top: 2px solid $jpW_Boder;
+                border-top: 2px solid $main-Border_1;
             }
         }
     }

@@ -58,13 +58,13 @@
                 input {
                     width: 100%;
                     height: 100%;
-                    @include inputMain;
+                    @include mainInput;
                     font-size: 14px;
                     font-weight: bold;
                     padding-left: 30px;
                 
                     &::placeholder {
-                        color: $header_accWord;
+                        color: $subs-font;
                     }
                 }
             }
@@ -210,21 +210,19 @@
                     }
                 }
 
+                &.message {
+                    position: relative;
+                }
+
                 &.logout {
                     @include headerBtn_3;
                 }
             }
             .messageAlarm{
                 position: absolute;
-                color: $header_Message_AlarmNum;
-                background: $header_Message_AlarmBG;
-                top: 1px;
-                right: 108px;
-                padding: 1px 3px;
-                font-size: 8px;
-                text-align: center;
-                border-radius: 16px;
-                z-index: 999;
+                top: -3px;
+                left: 25px;
+                @include mailRemind;
             }
         }
     }
@@ -291,20 +289,52 @@
                             width: auto;
                             height: auto;
                             flex-direction: column;
+                            margin-right: 27px;
+                            position: relative;
                             cursor: pointer;
-                                
+
+                            :last-child {
+                                margin-right: 0;
+                            }
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                width: 143px;
+                                height: 10px;       
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                            }
+                            
+                            ::after {
+                                content: url("../images/icon/hover.png");
+                                position: absolute;
+                                width: 143px;
+                                height: 10px;
+                                left: 0;
+                                top: 97.5%;
+                                width: 100%;
+                                height: 100%;
+                                opacity: 0;
+                            }
+  
                             p {
                                 width: 100%;
                                 margin-top: 18px;
                                 font-size: 14px;
                                 color: $header_dropdown_font;
                                 text-align: center;
+                                margin-bottom: 16px;
                             }
 
-                            &:hover,&:active {
+                            &:hover,&:active,&.active{
                                 img {
                                     transform: scale(1.1);
                                     transition: ease-in;
+                                }
+                                ::after {
+                                    opacity: 1;
                                 }
                             }
                         }
@@ -329,61 +359,3 @@
        
     }
 }
-
-//上
-// .loginArea{
-//     display: inline;
-//     height: 40px;
-//     float: right;
-//     margin-right: 344px;
-//     line-height: 40px;
-//     input{
-//         width: 148px;
-//         height: 25px;
-//         background-color: $header_BG_1;
-//         border: solid 1px $line_boder;
-//         border-radius: 5px;
-//         color: $sub-font;
-//         padding-left: 8px;
-//         margin-right: 8px;
-//     }
-//     button {
-
-//         &.login {
-
-//         }
-//     }
-//     button .login{
-//         font-size: 12px;
-//         padding: 8px 15px;
-        
-//     }
-//     button .signup{
-//         font-size: 12px;
-//         padding: 8px 15px;
-//     }
-// }
-
-//下
-// .nav{
-//     display: block;
-//     width: 100%;
-//     height: 60px;
-//     float: right;
-//     background-image: linear-gradient(to top, #101010, #2a2723);
-//         ul{ 
-//             width: 1200px;
-//             display: block;
-//             align-items: center;
-//             float: left;
-//             margin-left:670px;
-//                 li{ 
-//                     display: inline;
-//                     font-size: 17px;
-//                     color: $main-font;
-//                     text-align: center;
-//                     padding: 21px 28px;
-//                     line-height: 60px;
-//                 }
-//             }
-// }

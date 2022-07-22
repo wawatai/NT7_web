@@ -1,7 +1,21 @@
 .eventPage{
-    padding-top: 345px;
+    padding-top: 233px;
+    
+    //上部Banner
+    .topArea .eventBanner {
+        width: 100%;
+        height: 221px;
+        position: absolute;
+        top: 100px;
+        left: 0;
+    }
 
-    .wrap{
+    .wrap {
+        display: flex;
+        width: 1200px;
+        height: auto;
+        margin: 0 auto;
+        padding: 120px 0 28px;
         display: flex;
         justify-content: space-between;
 
@@ -9,32 +23,31 @@
         .leftArea {
             width: 357px;
             height: auto;
-            background: $eventPage_blockBg;
-            border: 1px solid $eventPage_Border;
-            border-radius: 5px;
+            @include bgStyle_1;
 
             .eventFilter{
                 width: 100%;
                 height: auto;
-                li{
+
+                li {
                     width: 100%;
                     height: 60px;
-                    display: flex;
-                    border-bottom: 1px solid $eventPage_innerBorder;
-                    color: $eventPage_mainFont;
-                    align-items: center;
-                    font-size: 20px;
-                    font-weight: bold;
+                    @include chooseStyle;
                     padding: 18px 23px;
-                    cursor: pointer;
 
-                    &:hover{
-                        color: $eventPage_subFont;
-                        background: $eventPage_blockBgHover;
+                    &:hover,&:active,&.active {
 
                         i {
                             background-position-y: 100%;
                         }
+                    }
+
+                    //全部活動ICON
+                    .eventDateIc {
+                        width: 27px;
+                        height: 27px;
+                        margin-right: 17px;
+                        background-position-y: 0;
                     }
                 }
             }
@@ -54,17 +67,15 @@
 
                 .eventBox {
                     width: 100%;
-                    height: 227px;
-                    background: $eventPage_blockBg;
-                    border: 1px solid $eventPage_Border;
-                    border-radius: 5px;
+                    height: auto;
+                    @include bgStyle_1;
                     margin-bottom: 19px;
     
                     &:last-child {
                         margin-bottom: 0;
                     }
     
-                    &img {
+                    img {
                         width: auto;
                         height: 170px;
                     }
@@ -79,7 +90,7 @@
                         
                         //優惠名稱
                         .eventTitle {
-                            color: $eventPage_mainFont;
+                            color: $main-font;
                             font-size: 21px;
                         }
     
@@ -89,46 +100,17 @@
                             
                             //未符優惠資格_按鈕樣式(申請灰底+查看)
                             .Btn {
-                                color: $eventPage_btnUnactFont;
-                                background: $eventPage_btnUnactBg;
-                                font-size: 16px;
-                                padding: 9px 36px;
-                                margin-left: 11px;
-                                border-radius: 5px ;
-                                cursor: pointer;
-    
-                                &.check{
-                                    color: $eventPage_mainFont;
-                                    background: $eventPage_btnactCheckBg;
-                                    border: 1px solid $eventPage_Border;
-        
-                                    &:hover{
-                                        color: $eventPage_mainFont;
-                                        background: $eventPage_btnactCheckBgH;
-                                    }
-                                }
-                            }
-                        }
+                                width: auto;
+                                height: 40px;
+                                padding: 0 15px;
 
-                        //符合參加優惠_按鈕樣式
-                        .able {
-
-                            //申請提領
-                            .apply {
-                                color: $eventPage_subFont;
-                                background: $eventPage_btnactBg;
-    
-                                &:hover {
-                                    color: $eventPage_subFont;
-                                    background: $eventPage_btnactBgH;
+                                &.apply {
+                                    @include mainBtn;
                                 }
-                            }
-                            
-                            //查看
-                            .check {
-                                @include darkBtn;
-                                padding: 9px 36px;
-                                margin-left: 11px;
+                                &.check {
+                                    @include secondBtn;
+                                    margin-left: 12px;
+                                }
                             }
                         }
                     }
@@ -140,9 +122,7 @@
             .eventDitail{
                 width: 100%;
                 height: 660px;
-                background: $eventPage_blockBg;
-                border: 1px solid $eventPage_Border;
-                border-radius: 5px;
+                @include bgStyle_1;
                 display: none;
 
                 &.display {
@@ -151,14 +131,14 @@
 
                 //優惠標題
                 .title {
-                    color: $eventPage_mainFont;
+                    color: $main-font;
                     font-size: 32px;
                     margin: 22px ;
                 }
 
                 //返回前列按鈕
                 .backBtn {
-                    @include darkBtn;
+                    @include secondBtn;
                     width: 123px;
                     height: 45px;
                     display: flex;
@@ -169,7 +149,38 @@
                     p {
                         font-size: 15px;
                     }
+                    
+                    &:hover,&:active,&.active {
+
+                        i {
+                            background: none;
+
+                            &::before {
+                                display: block;
+                            }
+                        }
+                    }
+
                 }
+                //返回前列ICON
+                .backIc {
+                    width: 16px;
+                    height: 14px;
+                    margin-right: 10px;
+                    transform: rotate(90deg);
+                    position: relative;
+
+                    &::before {
+                        display: none;
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
 
                 //優惠內容細項(時間/辦法)
                 .info {
@@ -177,13 +188,13 @@
                     height: auto;
                     
                     .subtitle {
-                        color: $eventPage_mainFont;
+                        color: $main-font;
                         font-size: 25px;
                         padding: 32px 22px;
                     }
                     
                     .infoContent {
-                        color: $eventPage_btnUnactFont;
+                        color: $subs-font_2;
                         font-size: 18px;
                         padding: 0 22px 22px;
                     }
@@ -191,7 +202,7 @@
                 
                 //分隔線
                 .time {
-                    border-bottom: 1px solid $eventPage_innerBorder;
+                    border-bottom: 1px solid $main-Border_1;
                 }
             }
         }
@@ -199,25 +210,25 @@
 
     //頁數
     .bottomArea {
-        display: inline;
+        display: flex;
 
         ul {
             width: 100%;
             height: auto;
             display: flex;
             justify-content: right;
-            margin-top: 24px;
+            margin: 24px 346px 24px 0;
 
             
             li {
                 font-size: 16px;
                 padding: 7px 10px;
-                color: $eventPage_mainFont;
+                color: $main-font;
                 margin-right: 10px;
                 cursor: pointer;
 
                 &.active {
-                    color: $eventPage_subFont;
+                    color: $dark-font;
                     background: $eventPage_pageBtnBG;
                     border-radius: 50px;
                 }
@@ -232,7 +243,7 @@
 
             //上一頁
             .up {
-                color: $eventPage_pageBtnUP
+                color: $subs-font;
             }
         }
     }

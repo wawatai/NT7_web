@@ -2,96 +2,59 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.25">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=0.25"> -->
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
-    <script src="../js/javascript.js"></script>
+    <script type="module" src="../js/javascript.js"></script>
 </head>
 <body>
+    <!--main-->
     <main>
         <div class="registerWrap">
             <div class="bigBox">
-                <div class="title">
-                    <img src="../images/icon/logo.png" class="logo">
-                    <p>
-                        <i class="register_ic"></i>
-                        登録
-                    </p>
+                <div class="leftWrap">
+                    <div class="img"></div>
                 </div>
-                <div class="inputBox">
-                    <form>
-                        <label>
-                            <em>※</em>
-                            <input type="text" placeholder="アカウントID">
-                            <p class="remind">アカウント番号には、英字（半角英字・数字のみでも可能です。）が含まれている必要があります。少なくとも6文字必要です</p>
-                        </label>
-                        <label>
-                            <em>※</em>
-                            <input type="text" placeholder="パスワード">
-                            <p class="remind">英語の数字と限定された特殊記号（@._$#%^&*+-）を使用できます</p>
-                            <i class="eye_ic"></i>
-                        </label>
-                        <label>
-                            <em>※</em>
-                            <input type="text" placeholder="パスワード再確認">
-                        </label>
-                        <label>
-                            <em>※</em>
-                            <input type="text" placeholder="お名前">
-                        </label>
-                        <label>
-                            <em>※</em>
-                            <input type="text" placeholder="誕生日">
-                            <i class="date_ic"></i>
-                        </label>
-                    </form>
-                    <form>
-                        <label>
-                            <em>※</em>
-                            <input type="text" placeholder="携帯電話" class="phone">
-                            <button class="codeBtn" disabled>認証コードを取得する</button>
-                        </label>
-                        <label>
-                            <em>※</em>
-                            <input type="text" placeholder="携帯認証コード">
-                        </label>
-                        <label>
-                            <em>※</em>
-                            <input type="text" placeholder="メールアドレス">
-                        </label>
-                        <label>
-                            <input type="text" placeholder="招待コード">
-                            <p class="remind">紹介コードがない場合は記入しないでください</p>
-                        </label>
-                        <label>
-                            <input type="text" placeholder="LINE ID" class="line">
-                            <i class="line_ic"></i>
-                        </label>
-                    </form>
-                </div>
-                <div class="check">
-                    <div class="checkBox">
+                <form>
+                    <div class="title">
+                        <i class="user_ic"></i>
+                        <p>註冊</p>
+                    </div>
+                    <label>
+                        <input type="text" placeholder="請輸入帳號">
+                        <p class="remind">帳號須包含一個英文字母(大小寫皆可);最少六個字元</p>
+                    </label>
+                    <label>
+                        <input type="text" placeholder="輸入密碼">
+                        <i class="eye_ic"></i>
+                        <p class="remind">數字英文,及限定的特殊符號(@._$#%^&*+-)可使用</p>
+                    </label>
+                    <label>
+                        <input type="text" placeholder="密碼確認">
+                    </label>
+                    <label>
+                        <input type="text" placeholder="手機">
+                        <button class="codeBtn">取得驗證碼</button>
+                    </label>
+                    <label>
+                        <input type="text" placeholder="邀請碼">
+                    </label>
+                    <div class="ruleBox">
                         <input type="checkbox">
                         <p>
-                            全部読んで同意する
-                            <span class="rule">利用規約とプライバシーポリシー</span>
+                            已閱讀並同意
+                            <span>相關條款與隱私政策</span>
                         </p>
                     </div>
-                    <p class="remind">利用規約とプライバシーポリシーを読み、同意してください</p>
-                </div>
-                <div class="btnBox">
-                    <button onclick="window.location.href='../index.html'">お試し</button>
-                    <button>確認</button>
-                </div>
+                    <button class="check" type="button" disabled>確認</button>
+                    <button class="enter" type="button" onclick="window.location.href='../index.html'">進去逛逛</button>
+                </form>
             </div>
         </div>
     </main>
-    <div class="filter">
+    <!-- 彈跳視窗 -->
+    <div class="coverBg">
         <!--相關條款彈窗-->
         <div class="jumpWindow ruleWindow">
             <div class="title">
@@ -322,5 +285,7 @@
             </div>
         </div>
     </div>
+    <!--BG-->
+    <div class="bg register"></div>
 </body>
 </html>
