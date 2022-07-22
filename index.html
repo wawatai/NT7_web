@@ -29,9 +29,10 @@
                 </label>
                 <label class="password">
                     <input type="password" placeholder="密碼">
+                    <i class="forget_ic"></i>
                 </label>
                 <button class="login" onclick="window.location.href='./html/indexInner.html'">登入</button>
-                <button class="signup">立即註冊</button>
+                <button class="signup" onclick="window.location.href='./html/register.html'">立即註冊</button>
             </div>
         </section>
         <!--導航列-->
@@ -40,8 +41,8 @@
                 <li class="active">
                     <a href="./index.html">首頁</a>
                 </li>
-                <li>
-                    <a href="./html/sportPage.html">體育賽事</a>
+                <li class="unLogin">
+                    <a href="javascript:;">體育賽事</a>
                     <ul class="dropdown">
                         <ol>
                             <li class="platformBox">
@@ -56,8 +57,8 @@
                         </ol>
                     </ul>
                 </li>
-                <li>
-                    <a href="./html/livePage.html">真人娛樂</a>
+                <li class="unLogin">
+                    <a href="javascript:;">真人娛樂</a>
                     <ul class="dropdown">
                         <ol>
                             <li class="platformBox">
@@ -75,8 +76,8 @@
                         </ol>
                     </ul>
                 </li>
-                <li>
-                    <a href="./html/lotteryPage.html">彩票</a>
+                <li class="unLogin">
+                    <a href="javascript:;">彩票</a>
                     <ul class="dropdown">
                         <ol>
                             <li class="platformBox">
@@ -89,10 +90,9 @@
                             </li>
                         </ol>
                     </ul>
-            </li>
                 </li>
-                <li >
-                    <a href="./html/slotPage.html">老虎機</a>
+                <li class="unLogin">
+                    <a href="javascript:;">老虎機</a>
                     <ul class="dropdown">
                         <ol>
                             <li class="platformBox">
@@ -117,10 +117,24 @@
                             </li>
                         </ol>
                     </ul>
-            </li>
                 </li>
-                <li>
-                    <a href="./html/fishPage.html">捕魚機</a>
+                <li class="unLogin">
+                    <a href="javascript:;">捕魚機</a>
+                    <ul class="dropdown">
+                        <ol>
+                            <li class="platformBox">
+                                <img src="./images/dropDown/toBeContinue.png">
+                                <p>敬請期待!</p>
+                            </li>
+                            <li class="platformBox">
+                                <img src="./images/dropDown/toBeContinue.png">
+                                <p>敬請期待!</p>
+                            </li>
+                        </ol>
+                    </ul>
+                </li>
+                <li class="unLogin">
+                    <a href="javascript:;">棋牌遊戲</a>
                     <ul class="dropdown">
                         <ol>
                             <li class="platformBox">
@@ -135,26 +149,10 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="./html/chessPage.html">棋牌遊戲</a>
-                    <ul class="dropdown">
-                        <ol>
-                            <li class="platformBox">
-                                <img src="./images/dropDown/toBeContinue.png">
-                                <p>敬請期待!</p>
-                            </li>
-                            <li class="platformBox">
-                                <img src="./images/dropDown/toBeContinue.png">
-                                <p>敬請期待!</p>
-                            </li>
-                        </ol>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">優惠中心</a>
+                    <a href="./html/eventPage.html">優惠中心</a>
                 </li>
             </ul>
         </section>
-        
     </header>
     <!--main-->
     <main>
@@ -180,7 +178,7 @@
             </div>
             <!-- 遊戲種類 -->
             <div class="gameType">
-                <div class="gameBlock sport">
+                <div class="gameBlock sport unLogin">
                     <div class="list_ic sport"></div>
                     <div class="gT-text">
                         <p>體育賽事</p>
@@ -188,7 +186,7 @@
                     </div>
                     <i class="arrow_ic"></i>
                 </div>
-                <div class="gameBlock live">
+                <div class="gameBlock live unLogin">
                     <div class="list_ic live"></div>
                     <div class="gT-text">
                         <p>真人娛樂</p>
@@ -196,7 +194,7 @@
                     </div>
                     <i class="arrow_ic"></i>
                 </div>
-                <div class="gameBlock lottery">
+                <div class="gameBlock lottery unLogin">
                     <div class="list_ic lottery"></div>
                     <div class="gT-text">
                         <p>彩票</p>
@@ -204,7 +202,7 @@
                     </div>
                     <i class="arrow_ic"></i>
                 </div>
-                <div class="gameBlock slot">
+                <div class="gameBlock slot unLogin">
                     <div class="list_ic slot"></div>
                     <div class="gT-text">
                         <p>老虎機</p>
@@ -212,7 +210,7 @@
                     </div>
                     <i class="arrow_ic"></i>
                 </div>
-                <div class="gameBlock fish">
+                <div class="gameBlock fish unLogin">
                     <div class="list_ic fish"></div>
                     <div class="gT-text">
                         <p>捕魚機</p>
@@ -220,7 +218,7 @@
                     </div>
                     <i class="arrow_ic"></i>
                 </div>
-                <div class="gameBlock poker">
+                <div class="gameBlock poker unLogin">
                     <div class="list_ic poker"></div>
                     <div class="gT-text">
                         <p>棋牌遊戲</p>
@@ -231,21 +229,21 @@
             </div>
             <!-- 服務列 -->
             <div class="service">
-                <div class="servBlock">
+                <div class="servBlock unLogin">
                     <div class="textBlock">
                         <p>免費開戶</p>
                         <span>JOIN US</span>
                     </div>
                     <div class="img joinUs"></div>
                 </div>
-                <div class="servBlock">
+                <div class="servBlock" onclick="window.location.href='./html/eventPage.html'">
                     <div class="textBlock">
                         <p>精彩活動</p>
                         <span>PROMOTIONS</span>
                     </div>
                     <div class="img promotions"></div>
                 </div>
-                <div class="servBlock">
+                <div class="servBlock" onclick="window.location.href='./html/help.html'">
                     <div class="textBlock">
                         <p>線上客服</p>
                         <span>CUSTOMER SERVICE</span>
@@ -256,15 +254,15 @@
         </article>
     </main>
     <aside>
-        <div class="appD">
+        <div class="appD" onclick="window.location.href='./html/help.html'">
             <i class="download_ic"></i>
             手機下載
         </div>
         <div class="cs-service">
-            <button class="cs1">
+            <button class="cs1" onclick="window.location.href='./html/help.html'">
                 <i class="service_ic"></i>
             </button>
-            <button class="cs2">
+            <button class="cs2" onclick="window.location.href='./html/help.html'">
                 <i class="line_ic"></i>
             </button>
         </div>
@@ -274,10 +272,10 @@
     <footer>
         <div class="top">
             <ul>
-                <li>最新公告</li>
-                <li>VIP會員</li>
+                <li class="unLogin">最新公告</li>
+                <li class="unLogin">VIP會員</li>
                 <li onclick="window.location.href='./html/help.html'">幫助中心</li>
-                <li>關於我們</li>
+                <li onclick="window.location.href='./html/help.html'">關於我們</li>
                 <li>加入我們</li>
             </ul>
         </div>
@@ -299,7 +297,6 @@
         <div class="bottom-copy">
             <p>&copy&nbsp;2022 BWG.COM ALL RIGHTS RESERVED.</p>
         </div>
-
     </footer>
     <!-- 彈跳視窗 -->
     <div class="coverBg">

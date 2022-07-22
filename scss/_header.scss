@@ -47,13 +47,6 @@
                     width: 12px;
                     height: 14px;
                 }
-                &::after {
-                    content: "";
-                    position: absolute;
-                    right: 10px;
-                    width: 14px;
-                    height: 14px;
-                }
 
                 input {
                     width: 100%;
@@ -66,6 +59,14 @@
                     &::placeholder {
                         color: $subs-font;
                     }
+                }
+
+                i {
+                    position: absolute;
+                    right: 10px;
+                    width: 14px;
+                    height: 14px;
+                    cursor: pointer;
                 }
             }
 

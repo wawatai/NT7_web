@@ -17,10 +17,9 @@ header .accountBox .password::before {
     background: url('../images/icon/svg/log-pw.svg') no-repeat;
     background-size: contain;
 }
-header .accountBox .password::after {
+header .accountBox .password i {
     background: url('../images/icon/svg/log-forget.svg') no-repeat;
     background-size: contain;
-    cursor: pointer;
 }
 header .memberCenter .member_ic{
     background: url('../images/icon/svg/login-member.svg') no-repeat;

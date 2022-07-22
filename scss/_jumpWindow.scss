@@ -150,7 +150,51 @@
                     @include mainBtn;
                     margin-top: 30px;
                 }
-             }
+            }
+
+            &.rule {
+                width: 820px;
+
+                .ruleCnt {
+                    width: 100%;
+                    height: auto;
+                    padding: 24px 32px;
+
+                    .ruleBox {
+                        width: 100%;
+                        height: auto;
+                        max-height: 500px;
+                        overflow-y: auto;
+                        @include scrollBar;
+
+                        .title {
+                            @include innerTitleStyle;
+                            border: none;
+                            padding: 0;
+                        }
+
+                        p:not(.title) {
+                            color: $subs-font_2;
+                            font-size: 14px;
+                            font-weight: bold;
+                            line-height: 20px;
+                            margin-bottom: 10px;
+
+                            &:last-child {
+                                margin: 0;
+                            }
+                        }
+                    }
+
+                    button {
+                        width: 240px;
+                        height: 42px;
+                        @include mainBtn;
+                        display: block;
+                        margin: 24px auto 0;
+                    }
+                }
+            }
         }
 
         //忘記密碼
