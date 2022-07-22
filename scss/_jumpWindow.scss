@@ -595,5 +595,73 @@
                 }
             }
         }
+
+        //任務詳情
+        &.checkEvent {
+            width: 640px;
+
+            .content {
+                width: 100%;
+                height: auto;
+                padding: 24px 32px;
+
+                &>div {
+                    width: 100%;
+                    height: auto;
+                    max-height: 400px;
+                    overflow-y: auto;
+                    @include scrollBar;
+
+                    img {
+                        width: 100%;
+                        object-fit: contain;
+                        margin-bottom: 20px;
+                    }
+    
+                    ul {
+                        width: 100%;
+                        height: auto;
+    
+                        li {
+                            width: 100%;
+                            height: auto;
+                            margin-bottom: 16px;
+    
+                            &:last-child {
+                                margin: 0;
+                            }
+    
+                            .title {
+                                color: $main-font;
+                                font-size: 14px;
+                                font-weight: bold;
+                                margin-bottom: 6px;
+    
+                                &.sp {
+                                    display: inline-block;
+                                    margin-right: 10px;
+                                }
+                            }
+    
+                            p:not(.title) {
+                                display: inline;
+                                color: $subs-font_2;
+                                font-size: 14px;
+                                font-weight: bold;
+                                line-height: 18px;
+                            }
+                        }
+                    }
+                }
+
+                button {
+                    width: 180px;
+                    height: 42px;
+                    @include mainBtn;
+                    display: block;
+                    margin: 24px auto 0;
+                }
+            }
+        }
     }
 }

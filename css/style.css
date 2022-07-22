@@ -2246,6 +2246,87 @@ html body .coverBg .jumpWindow.phoneWindow form .btnBox .remind {
   text-align: center;
   margin-top: 16px;
 }
+html body .coverBg .jumpWindow.checkEvent {
+  width: 640px;
+}
+html body .coverBg .jumpWindow.checkEvent .content {
+  width: 100%;
+  height: auto;
+  padding: 24px 32px;
+}
+html body .coverBg .jumpWindow.checkEvent .content > div {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  overflow-y: auto;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+}
+html body .coverBg .jumpWindow.checkEvent .content > div::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+html body .coverBg .jumpWindow.checkEvent .content > div::-webkit-scrollbar-thumb {
+  background: #dbb271;
+  border-radius: 10px;
+}
+html body .coverBg .jumpWindow.checkEvent .content > div::-webkit-scrollbar-track {
+  background: #4b4b4b;
+  border-radius: 10px;
+}
+html body .coverBg .jumpWindow.checkEvent .content > div img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 20px;
+}
+html body .coverBg .jumpWindow.checkEvent .content > div ul {
+  width: 100%;
+  height: auto;
+}
+html body .coverBg .jumpWindow.checkEvent .content > div ul li {
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+}
+html body .coverBg .jumpWindow.checkEvent .content > div ul li:last-child {
+  margin: 0;
+}
+html body .coverBg .jumpWindow.checkEvent .content > div ul li .title {
+  color: #fed792;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+html body .coverBg .jumpWindow.checkEvent .content > div ul li .title.sp {
+  display: inline-block;
+  margin-right: 10px;
+}
+html body .coverBg .jumpWindow.checkEvent .content > div ul li p:not(.title) {
+  display: inline;
+  color: #eaeaea;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+}
+html body .coverBg .jumpWindow.checkEvent .content button {
+  width: 180px;
+  height: 42px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#fed792), color-stop(23%, #dfb975), color-stop(65%, #fed792));
+  background: linear-gradient(to top, #fed792 0%, #dfb975 23%, #fed792 65%);
+  border: none;
+  border-radius: 5px;
+  color: #101010;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin: 24px auto 0;
+}
+html body .coverBg .jumpWindow.checkEvent .content button:hover, html body .coverBg .jumpWindow.checkEvent .content button:active, html body .coverBg .jumpWindow.checkEvent .content button:active {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
+  background: linear-gradient(to bottom, #bc9c64 4%, #f3d197 93%);
+}
 html body .eventPage {
   padding-top: 233px;
 }
