@@ -633,18 +633,21 @@
             </div>
         </div>
     </main>
-    <!--懸浮列-->
+    <!-- 懸浮按鈕 -->
     <aside>
-        <div class="appD">
-            <button><a href="#"></a></button>
+        <div class="appD" onclick="window.location.href='./help.html'">
+            <i class="download_ic"></i>
+            手機下載
         </div>
         <div class="cs-service">
-            <button class="cs1"><a href="#"></a></button>
-            <button class="cs2"><a href="#"></a></button>
+            <button class="cs1" onclick="window.location.href='./help.html'">
+                <i class="service_ic"></i>
+            </button>
+            <button class="cs2" onclick="window.location.href='./help.html'">
+                <i class="line_ic"></i>
+            </button>
         </div>
-        <div class="bkTop">
-            <button></button>
-        </div>
+        <div class="bkTop"></div>
     </aside>
     <!--footer-->
     <footer>
@@ -861,45 +864,53 @@
         </div>
         <!--更變密碼彈窗-->
         <div class="jumpWindow passwordWindow">
-            <div class="title">
-                <p>バスワード変更</p>
-                <i class="close_ic"></i>
+            <!-- 標題 -->
+            <div class="titleArea">
+                <p class="title">提示</p>
+                <i class="closeBtn"></i>
             </div>
             <form>
                 <div class="content">
                     <ul>
-                        <li><input type="password" placeholder="旧パスワード"></li>
-                        <li><input type="password" placeholder="新しいパスワード"></li>
-                        <li><input type="password" placeholder="パスワードを確認"></li>
+                        <li>
+                            <input type="password" placeholder="舊登入密碼">
+                        </li>
+                        <li>
+                            <input type="password" placeholder="新登入密碼">
+                        </li>
+                        <li>
+                            <input type="password" placeholder="確認新密碼">
+                        </li>
+                        <li>
+                            <button class="closeBtn" type="button">確認</button>
+                        </li>
                     </ul>
-                </div>
-                <div class="btnBox">
-                    <button>確認</button>
                 </div>
             </form>
         </div>
         <!--更變手機彈窗-->
         <div class="jumpWindow phoneWindow">
-            <div class="title">
-                <p>携帯電話番号を連携してください</p>
-                <i class="close_ic"></i>
+            <!-- 標題 -->
+            <div class="titleArea">
+                <p class="title">提示</p>
+                <i class="closeBtn"></i>
             </div>
             <form>
                 <div class="content">
+                    <p class="title">原有號碼 : 8885555555 </p>
                     <ul>
-                        <li>元の番号 : 08001211211</li>
                         <li>
-                            <input type="password" placeholder="新しい電話番号を入力してください">
-                            <button>認証コードを取得する</button>
+                            <input type="password" placeholder="請輸入新手機號碼">
+                            <button>取得驗證碼</button>
                         </li>
                         <li>
-                            <input type="text" placeholder="認証コード">
+                            <input type="text" placeholder="驗證碼">
                         </li>
                     </ul>
                 </div>
                 <div class="btnBox">
-                    <button>確認</button>
-                    <p class="remind">認証コードを送信した後、すぐにライブチャットに連絡してください</p>
+                    <button class="closeBtn">確認</button>
+                    <p class="remind">送出驗證碼後，請立即連繫在線客服</p>
                 </div>
             </form>
         </div>

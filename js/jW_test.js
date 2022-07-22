@@ -34,4 +34,38 @@ $(function(){
         $(".jumpWindow").removeClass("display");
         $(".coverBg,.jumpWindow.quickTransfer.lottery").addClass("display");
     })
+    $(".callSlot").click(function(){
+        $(".jumpWindow").removeClass("display");
+        $(".coverBg,.jumpWindow.quickTransfer.slot").addClass("display");
+    })
+
+    //查詢紅利
+    $(".pointWrap td p:first-child").click(function(){
+        $(".jumpWindow").removeClass("display");
+        $(".coverBg,.jumpWindow.pointWindow").addClass("display");
+    })
+
+    //查看注單
+    $(".dealWrap .waterBox .list").click(function(){
+        $(".jumpWindow").removeClass("display");
+        $(".coverBg,.jumpWindow.waterWindow").addClass("display");
+    })
+
+    //存款提示
+    $(".depositWrap .cardFinish .check").click(function(){
+        $(".jumpWindow").removeClass("display");
+        $(".coverBg,.jumpWindow.clickWindow.deposit").addClass("display");
+    })
+
+    //更變密碼
+    $(".changePwBtn").click(function(){
+        $(".jumpWindow").removeClass("display");
+        $(".coverBg,.jumpWindow.passwordWindow").addClass("display");
+    })
+
+    //更變手機
+    $(".changePhBtn").click(function(){
+        $(".jumpWindow").removeClass("display");
+        $(".coverBg,.jumpWindow.phoneWindow").addClass("display");
+    })
 })

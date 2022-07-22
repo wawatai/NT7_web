@@ -127,6 +127,30 @@ $footer_Bottom_Word: #828282;
 //platformGame 遊戲廠商頁面
 $pfGame_subTitle: #b38f4f;
 $pfGame_textBox: #fff8d4;
+@mixin slotBtn_1 {
+    background: linear-gradient(to top,#aa0b1a 0%,#e50f23 100%);
+    border-radius: 5px;
+    border: solid 1px #ff203a;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to bottom,#870713 0%,#aa0b1a 100%);
+    }
+}
+@mixin slotBtn_2  {
+    background: linear-gradient(to top,#004ba0 0%,#006ae2 100%);
+    border-radius: 5px;
+    border: solid 1px #1a70ff;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to bottom,#003173 0%,#004ba0 100%);
+    }
+}
 
 //jumpWindow
 $coverBg: #000000b3;
@@ -255,6 +279,7 @@ $asideBtn_Hover: #ffffff;
 $asideBtn_Shadow: #ffffff80;
 $asideBtn_goTop_BG: linear-gradient(to top,#fed792 21%,#bc9c64 40%,#fed792 59%,#ffe1ac 100%);
 $asideBtn_goTop_HoverBG: linear-gradient(to top,#e7c68b 0%,#af8d50 100%);
+
 
 
 //共用樣式

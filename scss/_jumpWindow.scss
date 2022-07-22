@@ -317,5 +317,283 @@
                 border-top: 2px solid $main-Border_1;
             }
         }
+
+        //紅利會員彈窗
+        &.pointWindow {
+            width: 580px;
+
+            .content {
+                width: 100%;
+                height: auto;
+                padding: 24px;
+
+                table {
+                    width: 100%;
+                    height: auto;
+                    @include bgStyle_3;
+
+                    tr {
+
+                        &:last-child {
+
+                            td {
+                                border-bottom: none;
+                            }
+                        }
+
+                        th {
+                            height: 36px;
+                            vertical-align: middle;
+                            border-bottom: solid 2px $main-Border_2;
+
+                            &:last-child {
+
+                                p {
+                                    border: none;
+                                }
+                            }
+                            
+                            p {
+                                width: 100%;
+                                height: 24px;
+                                border-right: solid 1px $main-Border_1;
+                                color: $main-font;
+                                font-size: 14px;
+                                font-weight: bold;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                @include textHidden;
+                            }
+                        }
+
+                        td {
+                            width: 50%;
+                            height: 36px;
+                            vertical-align: middle;
+                            border-bottom: solid 1px $main-Border_1;
+
+                            &:last-child {
+
+                                p {
+                                    border: none;
+                                }
+                            }
+                            
+                            p {
+                                width: 100%;
+                                height: 24px;
+                                border-right: solid 1px $main-Border_1;
+                                color: $subs-font_2;
+                                font-size: 14px;
+                                font-weight: bold;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                @include textHidden;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //注單明細
+        &.waterWindow {
+            width: 840px;
+
+            .content {
+                width: 100%;
+                height: auto;
+                padding: 0 24px 24px;
+
+                .title {
+                    width: 100%;
+                    height: auto;
+                    padding: 10px 0;
+                    color: $light-font;
+                    font-size: 16px;
+                    letter-spacing: 2px;
+                }
+
+                table {
+                    width: 100%;
+                    height: auto;
+                    @include bgStyle_3;
+
+                    tr {
+
+                        &:last-child {
+                            
+                            td {
+                                border: none;
+                            }
+                        }
+
+                        th {
+                            height: 36px;
+                            vertical-align: middle;
+                            border-bottom: solid 2px $main-Border_2;
+
+                            &:last-child {
+
+                                p {
+                                    border: none;
+                                }
+                            }
+
+                            p {
+                                width: 100%;
+                                height: 24px;
+                                border-right: solid 1px $main-Border_1;
+                                color: $main-font;
+                                font-size: 14px;
+                                font-weight: bold;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                @include textHidden;
+                            }
+                        }
+
+                        td {
+                            width: 10%;
+                            height: 36px;
+                            vertical-align: middle;
+                            border-bottom: solid 1px $main-Border_1;
+
+                            &:last-child {
+
+                                p {
+                                    border: none;
+                                }
+                            }
+
+                            p {
+                                width: 100%;
+                                height: 24px;
+                                border-right: solid 1px $main-Border_1;
+                                color: $subs-font_2;
+                                font-size: 14px;
+                                font-weight: bold;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                @include textHidden;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //更變密碼
+        &.passwordWindow {
+            width: 400px;
+
+            form {
+                width: 100%;
+                height: auto;
+                padding: 24px 48px;
+
+                .content {
+                    width: 100%;
+                    height: auto;
+                    
+                    ul {
+                        width: 100%;
+                        height: auto;
+
+                        li {
+                            width: 100%;
+                            height: auto;
+
+                            input {
+                                width: 100%;
+                                height: 42px;
+                                @include mainInput;
+                                margin-bottom: 16px;
+                            }
+
+                            button {
+                                width: 100%;
+                                height: 42px;
+                                @include mainBtn;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //更變手機
+        &.phoneWindow {
+            width: 400px;
+
+            form {
+                width: 100%;
+                height: auto;
+                padding: 0 48px 24px;
+
+                .title {
+                    width: 100%;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    color: $remind;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+
+                ul {
+                    width: 100%;
+                    height: auto;
+
+                    li {
+                        width: 100%;
+                        height: auto;
+                        position: relative;
+                        margin-bottom: 16px;
+
+                        input {
+                            width: 100%;
+                            height: 42px;
+                            @include mainInput;
+                        }
+
+                        button {
+                            position: absolute;
+                            top: 50%;
+                            right: 5px;
+                            transform: translateY(-50%);
+                            width: auto;
+                            height: 32px;
+                            @include secondBtn;
+                            padding: 0 15px;
+                        }
+                    }
+                }
+
+                .btnBox {
+                    width: 100%;
+                    height: auto;
+
+                    button {
+                        width: 100%;
+                        height: 42px;
+                        @include mainBtn;
+                    }
+
+                    .remind {
+                        width: 100%;
+                        color: $remind;
+                        font-size: 14px;
+                        font-weight: bold;
+                        text-align: center;
+                        margin-top: 16px;
+                    }
+                }
+            }
+        }
     }
 }
